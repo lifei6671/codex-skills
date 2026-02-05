@@ -378,7 +378,7 @@ args = [ "-y", "@modelcontextprotocol/server-sequential-thinking" ]
 [mcp_servers.context7]
 type = "stdio"
 command = "npx"
-args = [ "-y", "@upstash/context7-mcp" , "--api-key", "ctx7sk-2d5bae46-a080-47dd-b786-e74c3ab595d2"]
+args = [ "-y", "@upstash/context7-mcp" , "--api-key", "${CONTEXT7_API_KEY}" ]
 
 [mcp_servers.memory]
 type = "stdio"

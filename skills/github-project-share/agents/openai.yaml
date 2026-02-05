@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Project Share"
+  short_description: "生成中文 GitHub 项目分享文章"
+  default_prompt: "Use $github-project-share to create a Chinese share article from this GitHub repo link."

@@ -1,0 +1,46 @@
+[mcp_servers]
+[mcp_servers.sequential-thinking]
+type = "stdio"
+command = "npx"
+args = [ "-y", "@modelcontextprotocol/server-sequential-thinking" ]
+
+[mcp_servers.context7]
+type = "stdio"
+command = "npx"
+args = [ "-y", "@upstash/context7-mcp" ]
+
+[mcp_servers.memory]
+type = "stdio"
+command = "npx"
+args = [ "-y", "@modelcontextprotocol/server-memory" ]
+
+[mcp_servers.shrimp-task-manager]
+type = "stdio"
+command = "npx"
+args = [ "-y", "mcp-shrimp-task-manager" ]
+env = { DATA_DIR = ".shrimp", TEMPLATES_USE = "zh", ENABLE_GUI = "false" }
+
+[mcp_servers.deepwiki]
+type = "stdio"
+command = "mcp-proxy"
+args = [ "--transport", "streamablehttp", "https://mcp.deepwiki.com/mcp" ]
+
+[mcp_servers.microsoft-docs-mcp]
+type = "stdio"
+command = "mcp-proxy"
+args = [ "--transport", "streamablehttp", "https://learn.microsoft.com/api/mcp" ]
+
+[mcp_servers.duckduckgo-search]
+type = "stdio"
+command = "uvx"
+args = [ "duckduckgo-mcp-server" ]
+
+[mcp_servers.fetch]
+type = "stdio"
+command = "uvx"
+args = [ "mcp-server-fetch" ]
+
+[mcp_servers.serena]
+type = "stdio"
+command = "uvx"
+args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "codex"]

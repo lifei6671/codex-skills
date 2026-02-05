@@ -49,3 +49,9 @@
 - 本地/团队沉淀通用能力与提示词模板
 - 将 Codex 与 MCP 服务集成到项目流程中
 
+## Skill 大全
+
+| 项目 | 用途 | 仓库 |
+| ---- | ---- | --- |
+| ui-ux-pro-max-skill | 把「AI 直出页面的那股 AI 味」压下去，用一套更工程化、更审美化、更可复用的流程，让 UI/UX 设计质量显著提升 | <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>
+|awesome-codex-skills| Codex Skills 的精选集合 | <https://github.com/ComposioHQ/awesome-codex-skills> |

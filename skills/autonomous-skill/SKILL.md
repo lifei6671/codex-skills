@@ -9,7 +9,8 @@ Execute complex, long-running tasks across multiple sessions using a dual-agent 
 
 ## Quick Start
 
-Use the `run-session.sh` script to manage autonomous tasks:
+Linux/macOS: use the `run-session.sh` script.
+Windows: use the `run-session.ps1` script.
 
 ```bash
 # Start a new autonomous task
@@ -23,6 +24,20 @@ Use the `run-session.sh` script to manage autonomous tasks:
 
 # Show help
 ~/.codex/skills/autonomous-skill/scripts/run-session.sh --help
+```
+
+```powershell
+# Start a new autonomous task
+~/.codex/skills/autonomous-skill/scripts/run-session.ps1 "Build a REST API for todo app"
+
+# Continue an existing task
+~/.codex/skills/autonomous-skill/scripts/run-session.ps1 --task-name build-rest-api-todo --continue
+
+# List all tasks and their progress
+~/.codex/skills/autonomous-skill/scripts/run-session.ps1 --list
+
+# Show help
+~/.codex/skills/autonomous-skill/scripts/run-session.ps1 --help
 ```
 
 ## Directory Structure
@@ -54,6 +69,10 @@ Usage:
   run-session.sh --task-name <name> --continue Continue specific task
   run-session.sh --list                        List all tasks
   run-session.sh --help                        Show help
+  run-session.ps1 "task description"           Start new task (auto-generates name)
+  run-session.ps1 --task-name <name> --continue Continue specific task
+  run-session.ps1 --list                        List all tasks
+  run-session.ps1 --help                        Show help
 
 Options:
   --task-name <name>       Specify task name explicitly
